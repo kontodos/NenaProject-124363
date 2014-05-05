@@ -60,3 +60,5 @@ class MoneyCalculator
   end
 end
 
+end
+

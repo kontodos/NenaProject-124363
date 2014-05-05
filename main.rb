@@ -62,7 +62,7 @@ end
 
 post '/buy_product/:id' do
 	@product = Item.find(params[:id])
-	mc = MoneyCalculator.New(params[:1 coin], params[:5 coin], params[10 coin], params[20 bills], params[50 bills], params[100 bills], params[200 bills], params[500 bill], params[1000 bill]
+	mc = MoneyCalculator.New(params[:one_coin], params[:five_coin], params[:ten_coin], params[:twenty_bill], params[:fifty_bill], params[:one_hundred_bill], params[:two_hundred_bill], params[:five_hundred_bill], params[:one_thousand_bill])
 	erb :purchase_form
 end
 
