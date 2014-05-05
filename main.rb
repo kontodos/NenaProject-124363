@@ -1,5 +1,6 @@
 require 'sinatra'
 require './boot.rb'
+require './money_calculator'
 
 # ROUTES FOR ADMIN SECTION
 get '/admin' do
@@ -56,6 +57,12 @@ end
 
 get '/buy_product/:id' do
 	@product = Item.find(params[:id])
+	erb :purchase_form
+end
+
+post '/buy_product/:id' do
+	@product = Item.find(params[:id])
+	mc = MoneyCalculator.New(params[:1 coin], params[:5 coin], params[10 coin], params[20 bills], params[50 bills], params[100 bills], params[200 bills], params[500 bill], params[1000 bill]
 	erb :purchase_form
 end
 
