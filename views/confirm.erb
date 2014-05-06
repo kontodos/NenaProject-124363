@@ -12,10 +12,10 @@
     <title>Static Top Navbar Example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="\css\bootstrap.min.css" rel="stylesheet">
+    <link href="public\css\bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="\css\navbar-static-top.css" rel="stylesheet">
+    <link href="public\css\navbar-static-top.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -64,65 +64,21 @@
       </div>
     </div>
 
-<img id="banner" src="/images/banner.jpg" />
-<div class="container" >
-	<form method = "POST" action="/buy_product/<%= @product.id %>">
-<div id="payment1" class="container">
-	<h4>Product name:</h4>
-	<span><%= @product.name %></span>
-	<br />
-	
-	
-	
-	<h4>Price:</h4>
-	<span id="aprice"><%= @product.price %></span>
-	<br />
-	<h4>Quantity:</h4>
-	<input type="text" id="aquantity" name="aquantity" placeholder="Enter the amount you wish to buy">
-	<span><input type="button" name="button1" value="calculate" onClick="getTotal()">
-	<br />
-	<h4>Amount Due:</h4>
-	<!--<p id="final" name="due">0.0</p>-->
-	
-	<input type="text" id="final" name="due" disabled>
-	
-	
-</div>
-<div id="payment2">
-<h3>Please Input How Will You Pay:</h3>
-<br />
-<h4>1000 bills:</h4>
-<span><input type="text" name="one_thousand_bill"></span>
-<br />
-<h4>500 bills:</h4>
-<span><input type="text" name="five_hundred_bill"></span>
-<br />
-<h4>200 bills:</h4>
-<span><input type="text" name="two_hundred_bill"></span>
-<br />
-<h4>100 bills:</h4>
-<span><input type="text" name="one_hundred_bill"></span>
-<br />
-<h4>50 bills:</h4>
-<span><input type="text" name="fifty_bill"></span>
-<br />
-<h4>20 bills:</h4>
-<span><input type="text" name="twenty_bill"></span>
-<br />
-<h4>10 peso coins:</h4>
-<span><input type="text" name="ten_coin"></span>
-<br />
-<h4>5 peso coins:</h4>
-<span><input type="text" name="five_coin"></span>
-<br />
-<h4>1 peso coins:</h4>
-<span><input type="text" name="one_coin"></span>
+<img id="banner" src="public/images/banner.jpg" />
 
+<h1>Congratulations!</h1>
 <br />
-<button type="submit">Confirm!</button>
-
-	</div>
-</div>
+<h3>You gave:<%= @given %></h3>
+<h3>Your due:<%= @due %></h3>
+<h3>You bought:<%= @quantity %>&nbsp<%= @title %></h3>
+<h3>Your change is <%= @change %></h3>
+<h3>You will receive your change in the form of:</h3>
+<ul>
+<% @hash.each_pair do |key, value| %>
+<li><%= value %>&nbsp<%= key %></li>
+<% end %>
+</ul>
+<a href = "/"><input type="button" value="Done!"></a>
 
     <!--<div class="container">-->
 
@@ -144,16 +100,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="\js\bootstrap.min.js"></script>
-	<script>
-		function getTotal()
-		{
-			var aQuantity = document.getElementById("aquantity").value;
-			var aPrice = document.getElementById("aprice").innerHTML;
-			var total=aPrice*aQuantity;
-			//document.getElementById("final").innerHTML = total.toString();
-			document.getElementById("final").value = total.toString();
-		}
-	</script>
+    <script src="public\js\bootstrap.min.js"></script>
   </body>
 </html>
