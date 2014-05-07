@@ -16,6 +16,9 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/navbar-static-top.css" rel="stylesheet">
+	
+	<!--Custom font for this project -->
+	<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -26,7 +29,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
+<div id="everything">
   <body background="../images/sos.png">
 
     <!-- Static navbar -->
@@ -39,48 +42,29 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Aling Nena's</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/buy">Shop</a></li>
         
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-<img class="ri" src="../images/banner.jpg" />
-
-
-
+<img class="ri" src="../banners/BannerFinal.jpg" />
 <div class="content" >
 	<form method = "POST" action="/buy_product/<%= @product.id %>">
-<div id="payment1" class="container">
-	<h4>Product name:</h4>
+	<h3>Product name:</h3>
 	<span><%= @product.name %></span>
 	<br />
-	
-	
-	
-	<h4>Price:</h4>
+	<h3>Price:</h3>
 	<span id="aprice"><%= @product.price %></span>
 	<br />
-	<h4>Quantity:</h4>
+	<h3>Quantity:</h3>
 	<input type="text" id="aquantity" name="aquantity" placeholder="Enter the amount you wish to buy">
 	<span><input type="button" name="button1" value="calculate" onClick="getTotal()">
 	<br />
@@ -94,7 +78,7 @@
 
 
 </div>
-
+</div>
     <!--<div class="container">-->
 
       <!-- Main component for a primary marketing message or call to action -->

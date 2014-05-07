@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,10 +15,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css\navbar-static-top.css" rel="stylesheet">
-	
+
 	<!--Custom font for this project -->
 	<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
-
+	
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -56,25 +55,17 @@
       </div>
     </div>
 
-<img class="ri" src="/banners/BannerYellow.jpg" />
+<img class="ri" src="/banners/BannerPink.jpg" />
 
 	<div class="content">
-		<ul>
-		<% if @product.count == 0 %>
-			<h3>Welcome! We are currently out of stock. Sorry for the inconvenience</h3>
-		<% elsif @product.count < 10 %>
-			<h2>Welcome! Here are some of the products available:</h2>
-			<% @product.each do |item| %>
-			<li><h3><%= item.name %></h3></li>
-			<% end %>
-		<% else %>
-			<h3>Here are some of the products available:</h3>
-			<% for x in 0..9%>
-				<li><h3><%= @nameSample[x] %></h3></li>
-			<% end %>
-		<% end %>
-		</ul>
-		<br />
+	<h4>Aling Nena's is a sari-sari store that offers no less than everything you need. However, few knows that it started from humble beginnings.
+	It was first opened in 2009 by none other than Aling Nena. Since then, the store grew in terms of size and popularity.
+	Back in 2013, Aling Nena was fortunate enough to
+	know certain MIS students. They agreed to develop an inventory system for her. With this new technology, Aling Nena's sari-sari store
+	became more efficient and effective, propelling the franchise to what it is today. This year, Aling Nena decided to further expand
+	her market to the world wide web, ensuring the company's mark as one of the best sari-sari stores in the world. </h4>
+	<br />
+	<h4>Aling Nena's: Sari-sari store nga lang kami, may website naman!</h4>
 	</div>
 </div> <!--div for everything-->
 

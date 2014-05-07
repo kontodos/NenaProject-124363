@@ -66,6 +66,10 @@ get '/' do
 	erb :index
 end
 
+get '/about' do
+	erb :about
+end
+
 get '/buy' do
 	@product = Item.all
 	@alert = alerts

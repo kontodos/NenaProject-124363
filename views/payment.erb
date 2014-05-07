@@ -16,6 +16,9 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/navbar-static-top.css" rel="stylesheet">
+	
+	<!--Custom font for this project -->
+	<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -27,6 +30,7 @@
     <![endif]-->
   </head>
 
+ <div id="everything">
   <body background="../images/sos.png">
 
     <!-- Static navbar -->
@@ -39,42 +43,30 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Aling Nena's</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/buy">Shop</a></li>
         
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-<img class="ri" src="../images/banner.jpg" />
+<img class="ri" src="/banners/BannerBlue.jpg" />
 
 
 <form method = "POST" action="/confirm/<%= @product.id %>">
 <div class="content">
 <h3 style="color: red"><%= @alert %></h3>
-<h4>You have bought:<%= @quantity %>&nbsp<%= @title %></h3>
+<h3>You have bought:&nbsp<%= @quantity %>&nbsp<%= @title %></h3>
 <br />
-<h4>Your total amount due:<%= @due %></h3>
+<h3>Your total amount due:&nbsp<%= @due %></h3>
 <br />
-<h4>Please Input How Will You Pay:</h3>
+<h3>Please Input How Will You Pay:</h3>
 <br />
 <h4>1000 bills:</h4>
 <span><input type="text" name="one_thousand_bill"></span>
@@ -106,7 +98,7 @@
 <br />
 <button type="submit">Confirm!</button>
 </div>
-
+</div>
     <!--<div class="container">-->
 
       <!-- Main component for a primary marketing message or call to action -->

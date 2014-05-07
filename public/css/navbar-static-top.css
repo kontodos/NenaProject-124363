@@ -1,10 +1,24 @@
 body {
-  min-height: 2000px;
+  min-height: 1400px;
+  font-family: 'Archivo Narrow', sans-serif; 
 }
 
 .navbar-static-top {
   margin-bottom: 19px;
 }
+
+#everything
+{
+position: absolute;
+width: 1200px;
+height: 1400px;
+margin-left: 120px;
+margin-right: 30px;
+margin-top: 20px;
+background-color: white;
+}
+
+
 
 #banner
 {
@@ -16,10 +30,9 @@ img.ri
 {
 	position: absolute;
 	width: 1450px;
-	height: 200px;
+	height: 350px;
 	max-width: 100%;
 	max-height: 100%;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
 	margin-top: -19px;
 }
 
@@ -56,7 +69,7 @@ padding-top: 100px;
 
 .content
 {
-padding-top: 200px;
+padding-top: 400px;
 margin-left: 10%;
 margin-right: 10%;
 }
