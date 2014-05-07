@@ -12,10 +12,10 @@
     <title>Static Top Navbar Example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css\navbar-static-top.css" rel="stylesheet">
+    <link href="/css/navbar-static-top.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -59,30 +59,53 @@
               </ul>
             </li>
           </ul>
+        
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-<img class="ri" src="/images/banner.jpg" />
+<img class="ri" src="../images/banner.jpg" />
 
+
+<form method = "POST" action="/confirm/<%= @product.id %>">
 <div class="content">
-	<ul>
-		<% if @product.count == 0 %>
-			<h3>We are currently out of stock. Sorry for the inconvenience</h3>
-		<% elsif @product.count < 10 %>
-			<h3>Here are some of the products available:</h3>
-			<% @product.each do |item| %>
-			<li><%= item.name %></li>
-			<% end %>
-		<% else %>
-			<h3>Here are some of the products available:</h3>
-			<% for x in 0..9%>
-				<li><%= @nameSample[x] %></li>
-			<% end %>
-		<% end %>
-	</ul>
-	<br />
-	
+<h3 style="color: red"><%= @alert %></h3>
+<h4>You have bought:<%= @quantity %>&nbsp<%= @title %></h3>
+<br />
+<h4>Your total amount due:<%= @due %></h3>
+<br />
+<h4>Please Input How Will You Pay:</h3>
+<br />
+<h4>1000 bills:</h4>
+<span><input type="text" name="one_thousand_bill"></span>
+<br />
+<h4>500 bills:</h4>
+<span><input type="text" name="five_hundred_bill"></span>
+<br />
+<h4>200 bills:</h4>
+<span><input type="text" name="two_hundred_bill"></span>
+<br />
+<h4>100 bills:</h4>
+<span><input type="text" name="one_hundred_bill"></span>
+<br />
+<h4>50 bills:</h4>
+<span><input type="text" name="fifty_bill"></span>
+<br />
+<h4>20 bills:</h4>
+<span><input type="text" name="twenty_bill"></span>
+<br />
+<h4>10 peso coins:</h4>
+<span><input type="text" name="ten_coin"></span>
+<br />
+<h4>5 peso coins:</h4>
+<span><input type="text" name="five_coin"></span>
+<br />
+<h4>1 peso coins:</h4>
+<span><input type="text" name="one_coin"></span>
+<br />
+<br />
+<button type="submit">Confirm!</button>
+</div>
 
     <!--<div class="container">-->
 
@@ -104,6 +127,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js\bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>

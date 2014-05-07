@@ -12,10 +12,10 @@
     <title>Static Top Navbar Example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="public\css\bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="public\css\navbar-static-top.css" rel="stylesheet">
+    <link href="/css/navbar-static-top.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -27,7 +27,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body background="../images/sos.png">
 
     <!-- Static navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -64,8 +64,9 @@
       </div>
     </div>
 
-<img id="banner" src="public/images/banner.jpg" />
+<img class="ri" src="../images/Banner.jpg" />
 
+<div class="content">
 <h1>Congratulations!</h1>
 <br />
 <h3>You gave:<%= @given %></h3>
@@ -79,7 +80,7 @@
 <% end %>
 </ul>
 <a href = "/"><input type="button" value="Done!"></a>
-
+</div>
     <!--<div class="container">-->
 
       <!-- Main component for a primary marketing message or call to action -->
@@ -100,6 +101,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="public\js\bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>

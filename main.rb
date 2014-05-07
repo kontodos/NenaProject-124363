@@ -2,6 +2,10 @@ require 'sinatra'
 require './boot.rb'
 require './money_calculator.rb'
 
+
+myquantity = 0; #variable to track the quantity the user is buying
+alerts = ""
+
 # ROUTES FOR ADMIN SECTION
 get '/admin' do
   @products = Item.all
@@ -64,33 +68,67 @@ end
 
 get '/buy' do
 	@product = Item.all
+	@alert = alerts
 	erb :buy
 end
 
 get '/buy_product/:id' do
+	alerts = ""
+	@alerts = alerts
 	@product = Item.find(params[:id])
 	erb :purchase_form
 end
 
 post '/buy_product/:id' do
+	alerts = ""
+	@alerts = alerts
 	@product = Item.find(params[:id])
-	mc = MoneyCalculator.new params[:one_coin], params[:five_coin], params[:ten_coin], params[:twenty_bill], params[:fifty_bill], params[:one_hundred_bill], params[:two_hundred_bill], params[:five_hundred_bill], params[:one_thousand_bill]
-	@given = mc.total #gets the total payment of the user
-	@quantity = params[:aquantity] #gets the quantity the user bought
+	myquantity = params[:aquantity] #quantity the users wants to buy
+	@quantity = myquantity
+	#@quantity = params[:aquantity] #gets the quantity the user bought
 	@title = @product.name #gets item name
 	@due = @quantity.to_i * @product.price #gets total amount due
 	#@due = params[:due] code doesn't work
-	mc.getChange(@due) #performs money changer function
-	@change = @given - @due #change in mc just gives me 0 :(
-	@hash = mc.bills
 	#product.quantity = @product.quantity.to_i - @quantity.to_i
-	@left = @product.quantity.to_i - @quantity.to_i
-	@product.update_attributes!(
-	quantity: @left
-	)
-	erb :confirm
-	
-	
+
+	if myquantity.to_i > @product.quantity.to_i
+		alerts = "You tried to buy #{myquantity} #{@product.name} but we only have #{@product.quantity}. Sorry for the inconvenience"
+		redirect to '/buy'
+	else
+
+	@alert = alerts
+	erb :payment
+	end
 end
 
-
+post '/confirm/:id' do
+	alerts = ""
+	@alerts = alerts
+	
+	@product = Item.find(params[:id])
+	
+	@due = myquantity.to_i * @product.price
+	@quantity = myquantity
+	@title = @product.name
+	mc = MoneyCalculator.new params[:one_coin], params[:five_coin], params[:ten_coin], params[:twenty_bill], params[:fifty_bill], params[:one_hundred_bill], params[:two_hundred_bill], params[:five_hundred_bill], params[:one_thousand_bill]
+	@given = mc.total #gets the total payment of the user
+	mc.getChange(@due)
+	@change = @given - @due
+	@hash = mc.bills
+	
+	if @due.to_i > @given.to_i
+		alerts = "Your payment is insufficient."
+		@alert = alerts
+		erb :payment
+	else
+	
+	left = @product.quantity.to_i - myquantity.to_i
+	@product.sold = @product.sold + myquantity.to_i
+	
+	@product.update_attributes!(
+	quantity: left
+	)
+	
+	erb :confirm
+	end
+end
