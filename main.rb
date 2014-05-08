@@ -87,13 +87,10 @@ post '/buy_product/:id' do
 	alerts = ""
 	@alerts = alerts
 	@product = Item.find(params[:id])
-	myquantity = params[:aquantity] #quantity the users wants to buy
-	@quantity = myquantity
-	#@quantity = params[:aquantity] #gets the quantity the user bought
-	@title = @product.name #gets item name
-	@due = @quantity.to_i * @product.price #gets total amount due
-	#@due = params[:due] code doesn't work
-	#product.quantity = @product.quantity.to_i - @quantity.to_i
+	myquantity = params[:aquantity] #assigns the quantity to be bought to a local var to be used throughout the process
+	@quantity = myquantity 
+	@title = @product.name 
+	@due = @quantity.to_i * @product.price 
 
 	if myquantity.to_i > @product.quantity.to_i
 		alerts = "You tried to buy #{myquantity} #{@product.name} but we only have #{@product.quantity}. Sorry for the inconvenience"

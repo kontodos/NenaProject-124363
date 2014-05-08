@@ -1,7 +1,9 @@
 body {
   min-height: 1400px;
   font-family: 'Archivo Narrow', sans-serif; 
+  width: 960px;
 }
+
 
 .navbar-static-top {
   margin-bottom: 19px;
@@ -10,14 +12,13 @@ body {
 #everything
 {
 position: absolute;
-width: 1200px;
+width: 960px;
 height: 1400px;
-margin-left: 120px;
-margin-right: 30px;
+max-width: 100%;
+margin-left: 16%;
 margin-top: 20px;
 background-color: white;
 }
-
 
 
 #banner
