@@ -51,7 +51,7 @@ end
 
 get '/' do
 	product = Item.all
-	
+	alerts = ""
 	#create an array full of names
 	itemNames = []
 		product.each do |item|
@@ -67,6 +67,7 @@ get '/' do
 end
 
 get '/about' do
+	alerts = ""
 	erb :about
 end
 

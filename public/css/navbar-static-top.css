@@ -1,6 +1,7 @@
 body {
   min-height: 1400px;
-  font-family: 'Archivo Narrow', sans-serif; 
+  font-family: 'Archivo Narrow', sans-serif;
+background-image:url("../images/agsquare.png");
 }
 
 
@@ -19,6 +20,20 @@ margin-top: 20px;
 background-color: white;
 }
 
+#motto
+{
+margin-right: auto;
+margin-left: auto;
+font-size: 62px;
+}
+
+.divider
+{
+	width: 2px;
+	height: 300px;
+	display: inline-block;
+}
+
 .leftside
 {
 float:left;
@@ -29,6 +44,24 @@ width: 300px;
 {
 float: right;
 width: 300px;
+}
+
+#grandma
+{
+width: 300px;
+height: 300px;
+}
+
+.aboutleft
+{
+float: left;
+width: 450px;
+}
+
+.aboutright
+{
+width: 300px;
+float: right;
 }
 
 img.ri

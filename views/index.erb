@@ -31,7 +31,7 @@
   </head>
 
 
-  <body background="../images/sos.png">
+  <body>
   <div id="everything">
     <!-- Static navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -59,11 +59,13 @@
 <img class="ri" src="/banners/BannerYellow.jpg" />
 
 	<div class="content">
+		<h2 id="motto">The Only Store You'll Ever Need!</h2>
+		<div class="leftside">
 		<ul>
 		<% if @product.count == 0 %>
 			<h3>Welcome! We are currently out of stock. Sorry for the inconvenience</h3>
 		<% elsif @product.count < 10 %>
-			<h2>Welcome! Here are some of the products available:</h2>
+			<h3>Welcome! Here are some of the products available:</h3>
 			<% @product.each do |item| %>
 			<li><h3><%= item.name %></h3></li>
 			<% end %>
@@ -75,6 +77,17 @@
 		<% end %>
 		</ul>
 		<br />
+		</div>
+		<div class="rightside" id="announcements">
+		<h3>Daily Promos!</h3>
+		<ul>
+		<% y = rand(@product.count) %>
+			<li><h3>For every purchase of <%= @product[y].name %>, you get a chance to win a brand new BMW.</h3></li>
+			<br />
+		<% z = rand(@product.count) %>
+			<li><h3>If you buy 3 <%= @product[z].name %>, you get another one for free!</h3></li>
+		</ul>
+		</div>
 	</div>
 </div> <!--div for everything-->
 
