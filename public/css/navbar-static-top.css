@@ -1,7 +1,6 @@
 body {
   min-height: 1400px;
   font-family: 'Archivo Narrow', sans-serif; 
-  width: 960px;
 }
 
 
@@ -11,26 +10,31 @@ body {
 
 #everything
 {
-position: absolute;
 width: 960px;
 height: 1400px;
 max-width: 100%;
-margin-left: 16%;
+margin-right: auto;
+margin-left: auto;
 margin-top: 20px;
 background-color: white;
 }
 
-
-#banner
+.leftside
 {
-height: 200px;
-padding-left: 180px;
+float:left;
+width: 300px;
+}
+
+.rightside
+{
+float: right;
+width: 300px;
 }
 
 img.ri
 {
 	position: absolute;
-	width: 1450px;
+	width: 960px;
 	height: 350px;
 	max-width: 100%;
 	max-height: 100%;

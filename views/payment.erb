@@ -30,8 +30,9 @@
     <![endif]-->
   </head>
 
- <div id="everything">
+
   <body background="../images/sos.png">
+   <div id="everything">
 
     <!-- Static navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -59,13 +60,23 @@
 <img class="ri" src="/banners/BannerBlue.jpg" />
 
 
-<form method = "POST" action="/confirm/<%= @product.id %>">
+	<form method = "POST" action="/confirm/<%= @product.id %>">
 <div class="content">
 <h3 style="color: red"><%= @alert %></h3>
-<h3>You have bought:&nbsp<%= @quantity %>&nbsp<%= @title %></h3>
-<br />
-<h3>Your total amount due:&nbsp<%= @due %></h3>
-<br />
+	<div class="leftside">
+	
+	<h3>You have bought:</h3>
+	<br />
+	
+	<h4>&nbsp<%= @quantity %>&nbsp<%= @title %></h4>
+	<br />
+	<h3>Your total amount due:</h3>
+	<br />
+	<h4>&nbsp<%= @due %></h4>
+	<br />
+	</div>
+
+<div class="rightside">
 <h3>Please Input How Will You Pay:</h3>
 <br />
 <h4>1000 bills:</h4>
@@ -97,6 +108,7 @@
 <br />
 <br />
 <button type="submit">Confirm!</button>
+</div>
 </div>
 </div>
     <!--<div class="container">-->

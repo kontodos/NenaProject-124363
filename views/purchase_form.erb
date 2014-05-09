@@ -29,8 +29,9 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-<div id="everything">
+
   <body background="../images/sos.png">
+  <div id="everything">
 
     <!-- Static navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -57,25 +58,32 @@
 
 <img class="ri" src="../banners/BannerFinal.jpg" />
 <div class="content" >
-	<form method = "POST" action="/buy_product/<%= @product.id %>">
-	<h3>Product name:</h3>
-	<span><%= @product.name %></span>
-	<br />
-	<h3>Price:</h3>
-	<span id="aprice"><%= @product.price %></span>
-	<br />
-	<h3>Quantity:</h3>
-	<input type="text" id="aquantity" name="aquantity" placeholder="Enter the amount you wish to buy">
-	<span><input type="button" name="button1" value="calculate" onClick="getTotal()">
-	<br />
-	<h4>Amount Due:</h4>
-	<!--<p id="final" name="due">0.0</p>-->
+	<div class="leftside">
+		<form method = "POST" action="/buy_product/<%= @product.id %>">
+		<h3>Product name:</h3>
+		<span><%= @product.name %></span>
+		<br />
+		<h3>Price:</h3>
+		<span id="aprice"><%= @product.price %></span>
+		<br />
+		<h3>Quantity:</h3>
+		<span>&nbsp<%= @product.quantity %></span>
+		<br />
+	</div>
 	
-	<input type="text" id="final" name="due" disabled>
-	<br />
-	<br />
-<button type="submit">Confirm!</button>
-
+	<div class="rightside">
+		<h3>Quantity:</h3>
+		<input type="text" id="aquantity" name="aquantity" placeholder="Enter the amount">
+		<span><input type="button" name="button1" value="calculate" onClick="getTotal()">
+		<br />
+		<h4>Amount Due:</h4>
+		<!--<p id="final" name="due">0.0</p>-->
+	
+		<input type="text" id="final" name="due" disabled>
+		<br />
+		<br />
+		<button type="submit">Confirm!</button>
+	</div>
 
 </div>
 </div>
