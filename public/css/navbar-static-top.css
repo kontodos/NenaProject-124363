@@ -34,16 +34,24 @@ font-size: 62px;
 	display: inline-block;
 }
 
+#announcements
+{
+border-left:2px solid;
+padding-left: 4px;
+font-size: 12px;
+height: 300px;
+}
+
 .leftside
 {
 float:left;
-width: 300px;
+width: 400px;
 }
 
 .rightside
 {
 float: right;
-width: 300px;
+width: 350px;
 }
 
 #grandma
@@ -107,7 +115,7 @@ padding-top: 100px;
 
 .content
 {
-padding-top: 400px;
+padding-top: 350px;
 margin-left: 10%;
 margin-right: 10%;
 }

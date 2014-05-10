@@ -59,7 +59,7 @@
 <img class="ri" src="/banners/BannerYellow.jpg" />
 
 	<div class="content">
-		<h2 id="motto">The Only Store You'll Ever Need!</h2>
+		<u><h2 id="motto">The Only Store You'll Ever Need!</h2></u>
 		<div class="leftside">
 		<ul>
 		<% if @product.count == 0 %>
@@ -79,14 +79,14 @@
 		<br />
 		</div>
 		<div class="rightside" id="announcements">
-		<h3>Daily Promos!</h3>
+		<h3 style="color: red;">Daily Promos!</h3>
 		<ul>
 		<% y = rand(@product.count) %>
-			<li><h3>For every purchase of <%= @product[y].name %>, you get a chance to win a brand new BMW.</h3></li>
-			<br />
+			<li><h3 style="font-size: 18px;">For every purchase of <%= @product[y].name %>, you get a chance to win a brand new BMW.</h3></li>
 		<% z = rand(@product.count) %>
-			<li><h3>If you buy 3 <%= @product[z].name %>, you get another one for free!</h3></li>
+			<li><h3 style="font-size: 18px;">If you buy 3 <%= @product[z].name %>, you get a free ice cream!</h3></li>
 		</ul>
+		
 		</div>
 	</div>
 </div> <!--div for everything-->
