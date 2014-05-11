@@ -1,3 +1,306 @@
+body
+{
+background-image: url("images/tileable_wood_texture.png");
+font-family: 'Archivo Narrow', sans-serif; 
+}
+
+.banner
+{
+margin-top: 10px;
+width: 1000px;
+height: 300px;
+margin-left: auto;
+margin-right: auto;
+border: 1px solid orange;
+background-color: #FFF0D1;
+}
+
+.banner img
+{
+width: 1000px;
+height: 300px;
+
+}
+
+.navbar
+{
+width: 1000px;
+margin-left:auto;
+margin-right: auto;
+background-color: #FFF0D1;
+border: 1px solid orange;
+
+}
+
+.navbar ul { 
+	margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+	} 
+ 
+.navbar ul li {  
+	display: inline; 
+	} 
+ 
+.navbar ul li a { 
+	text-decoration: none; 
+	padding: .2em 1em; 
+	color: brown; 
+	background-color: #FFF0D1; 
+	} 
+ 
+.navbar ul li a:hover { 
+	color: #FFF0D1; 
+	background-color: orange; 
+	} 
+	
+.navbar li.active a
+{
+	color: #FFF0D1;
+	background-color: #663300;
+}
+
+.content
+{
+margin-top: 15px;
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+overflow: hidden;
+}
+
+.content2 /*content for about page */
+{
+width: 1000px;
+height: 350px;
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+overflow: hidden;
+background-color: #FFF0D1;
+border: 1px solid orange;
+}
+
+.content3 /*content for about buy */
+{
+width: 1000px;
+height: 800px;
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+overflow: hidden;
+background-color: #FFF0D1;
+border: 1px solid orange;
+}
+
+.contentcontent
+{
+width: 900px;
+height: 570px;
+margin-left: 50px;
+
+}
+
+#leftpart
+{
+float: left;
+width: 326px;
+height: 600px;
+background-color: #FFF0D1;
+margin-right: 10px;
+border: 1px solid orange;
+}
+
+#leftpart h1, h2, h3, h4
+{
+margin-left: 10px;
+}
+
+#mid
+{
+float: left;
+width: 325px;
+height: 600px;
+margin-right: 10px;
+}
+
+#midtop
+{
+position: relative;
+float: left;
+width: 325px;
+height: 300px;
+margin-bottom: 5px;
+background-color: #FFF0D1;
+border: 1px solid orange;
+}
+
+#midtop img
+{
+width: 310px;
+height: 290px;
+margin-left: 8px;
+margin-top: 5px;
+}
+
+#midcenter
+{
+position: relative;
+left: 25%;
+top: 40%;
+width: 170px;
+height: 100px;
+background-color: orange;
+z-index: 10;
+}
+
+#midcentercontent
+{
+position: absolute;
+width: 160px;
+height: 90px;
+margin-left: 4px;
+margin-top: 4px;
+border: 1px solid white;
+}
+
+#midcentercontent h1
+{
+text-align: center;
+margin-top: 8px;
+}
+
+#midbot
+{
+position: relative;
+margin-top: 5px;
+float: left;
+width: 325px;
+height: 300px;
+background-color: black;
+background-color: #FFF0D1;
+border: 1px solid orange;
+}
+
+#midbot img
+{
+width: 310px;
+height: 280px;
+margin-left: 8px;
+margin-top: 5px;
+}
+
+#rightpart
+{
+float: left;
+width: 325px;
+height: 600px;
+}
+
+#rightpart h1,h2,h3,h4,h5,h6
+{
+margin-left: 15px;
+}
+
+#bs
+{
+float: left;
+width: 325px;
+height: 500px;
+margin-bottom: 5px;
+background-color: #FFF0D1;
+border: 1px solid orange;
+}
+
+#contact
+{
+float: left;
+width: 325px;
+height: 90px;
+background-color: black;
+background-color: #FFF0D1;
+border: 1px solid orange;
+}
+
+#contact h5
+{
+line-height: 5px;
+}
+
+.aboutleft
+{
+float: left;
+width: 450px;
+}
+
+.aboutright
+{
+float: left;
+width: 450px;
+float: right;
+}
+
+.aboutright img
+{
+width: 400px;
+height: 300px;
+margin-top: 15px;
+margin-left: 30px;
+}
+
+input[type="text"]
+{
+margin-left: 30px;
+}
+
+button
+{
+margin-left: 30px;
+}
+
+#bs button.payments
+{
+position: relative;
+top: -20px;
+left: 170px;
+}
+
+#leftpart input[type="button"]
+{
+margin-left: 30px;
+}
+
+#bs h6
+{
+margin-top: -20px;
+margin-left: 160px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS FOR TABLE */
 table {
   max-width: 100%;
   background-color: transparent;

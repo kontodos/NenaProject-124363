@@ -1,136 +1,100 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+<html>
+<head>
+<title> </title>
 
-    <title>Aling Nena's</title>
+<!--STYLESHEET-->
+<link rel="stylesheet" type="text/css" href="/mystyle.css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/css/navbar-static-top.css" rel="stylesheet">
-	
-	<!--Custom font for this project -->
-	<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-
-  <body>
-   <div id="everything">
-
-    <!-- Static navbar -->
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Aling Nena's</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
+<!--CUSTOM FONT-->
+<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="navbar">
+	<ul>
+		<li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li class="active"><a href="/buy">Shop</a></li>
-        
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+	</ul>
+</div>
 
-<img class="ri" src="/banners/BannerBlue.jpg" />
+<div class="banner">
+	<img src="/images/banners/BannerOrange.jpg">
+</div>
 
-
-	<form method = "POST" action="/confirm/<%= @product.id %>">
+<form method = "POST" action="/confirm/<%= @product.id %>">
 <div class="content">
-<h3 style="color: red"><%= @alert %></h3>
-	<div class="leftside">
-	
-	<h3>You have bought:</h3>
-	<br />
-	
-	<h4>&nbsp<%= @quantity %>&nbsp<%= @title %></h4>
-	<br />
-	<h3>Your total amount due:</h3>
-	<br />
-	<h4>&nbsp<%= @due %></h4>
-	<br />
+
+	<div id="leftpart">
+	<h3 style="color: red"><%= @alert %></h3>
+		<h3>You have bought:</h3>
+		<h4>&nbsp<%= @quantity %>&nbsp<%= @title %></h4>
+		<h3>Your total amount due:</h3>
+		<h4>&nbsp<%= @due %></h4>
 	</div>
-
-<div class="rightside">
-<h3>Please Input How Will You Pay:</h3>
-<br />
-<h4>1000 bills:</h4>
-<span><input type="text" name="one_thousand_bill"></span>
-<br />
-<h4>500 bills:</h4>
-<span><input type="text" name="five_hundred_bill"></span>
-<br />
-<h4>200 bills:</h4>
-<span><input type="text" name="two_hundred_bill"></span>
-<br />
-<h4>100 bills:</h4>
-<span><input type="text" name="one_hundred_bill"></span>
-<br />
-<h4>50 bills:</h4>
-<span><input type="text" name="fifty_bill"></span>
-<br />
-<h4>20 bills:</h4>
-<span><input type="text" name="twenty_bill"></span>
-<br />
-<h4>10 peso coins:</h4>
-<span><input type="text" name="ten_coin"></span>
-<br />
-<h4>5 peso coins:</h4>
-<span><input type="text" name="five_coin"></span>
-<br />
-<h4>1 peso coins:</h4>
-<span><input type="text" name="one_coin"></span>
-<br />
-<br />
-<button type="submit">Confirm!</button>
-</div>
-</div>
-</div>
-    <!--<div class="container">-->
-
-      <!-- Main component for a primary marketing message or call to action -->
-	  <!--
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-      </div>
-
-    </div> <!-- /container -->
 	
+	<div id="mid">
+	
+		<div id="midtop">
+			<img src="/images/kids01.jpg">
+		</div>
+		
+		
+		<div id="midcenter">
+			<div id="midcentercontent">
+				<h1>Filipino Love</h1>
+			</div>
+		</div>
+		
+		
+		<div id="midbot">
+			<img src="/images/kids02.jpg">
+		</div>
+		
+	</div>
+	
+	<div id="rightpart">
+		<div id="bs">
+			<h3>Please Input How Will You Pay:</h3>
+<h4>1000 bills:<span><input type="text" name="one_thousand_bill"></span></h4>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-  </body>
+<h4>500 bills:&nbsp&nbsp<span><input type="text" name="five_hundred_bill"></span></h4>
+
+<h4>200 bills:&nbsp&nbsp<span><input type="text" name="two_hundred_bill"></span></h4>
+
+<h4>100 bills:&nbsp&nbsp<span><input type="text" name="one_hundred_bill"></span></h4>
+
+<h4>50 bills:&nbsp&nbsp&nbsp<span><input type="text" name="fifty_bill"></span></h4>
+
+<h4>20 bills:&nbsp&nbsp&nbsp<span><input type="text" name="twenty_bill"></span></h4>
+
+<h4>10 coins:&nbsp&nbsp<span><input type="text" name="ten_coin"></span></h4>
+
+<h4>5 coins:&nbsp&nbsp&nbsp<span><input type="text" name="five_coin"></span></h4>
+
+<h4>1 coins:&nbsp&nbsp&nbsp<span><input type="text" name="one_coin"></span></h4>
+<button type="submit" class="payments">Confirm!</button>
+
+		</div>
+		
+		<div id="contact">
+			<h5>Telephone Number: 1234567</h5>
+			<h5>Email:Nenarockz_123@yahoo.com</h5>
+			<h5>Facebook: facebook.com/Nenarokzz</h5>
+		</div>
+
+</body>
+
+<script>
+		function getTotal()
+		{
+			var aQuantity = document.getElementById("aquantity").value;
+			var aPrice = document.getElementById("aprice").innerHTML;
+			var total=aPrice*aQuantity;
+			//document.getElementById("final").innerHTML = total.toString();
+			document.getElementById("final").value = total.toString();
+		}
+		
+		
+	</script>
 </html>

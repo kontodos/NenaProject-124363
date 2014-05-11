@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Aling Nena</title>
+<title> </title>
 
 <!--STYLESHEET-->
 <link rel="stylesheet" type="text/css" href="mystyle.css">
@@ -12,9 +12,9 @@
 <body>
 <div class="navbar">
 	<ul>
-		 <li class="active"><a href="/">Home</a></li>
+		<li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/buy">Shop</a></li>
+            <li class="active"><a href="/buy">Shop</a></li>
 	</ul>
 </div>
 
@@ -24,22 +24,7 @@
 <div class="content">
 	<div id="leftpart">
 		<h1>Welcome!</h1>
-		
-		<% if @product.count == 0 %>
-			<h3>Welcome! We are currently out of stock. Sorry for the inconvenience</h3>
-		<% elsif @product.count < 10 %>
-			<h3>Here are some of the products available:</h3>
-			<ul>
-			<% @product.each do |item| %>
-			<li><h3><%= item.name %></h3></li>
-			<% end %>
-		<% else %>
-			<h3>Here are some of the products available:</h3>
-			<% for x in 0..9%>
-				<li><h3><%= @nameSample[x] %></h3></li>
-			<% end %>
-		<% end %>
-		</ul>
+		<h4>Here are some of our available products:</h4>
 	</div>
 	
 	<div id="mid">
